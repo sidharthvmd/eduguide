@@ -1,0 +1,22 @@
+.navBar{
+    background-color: #b30c1d;
+    }
+    /* unvisited link */
+a:link {
+    color: black;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(248, 247, 247);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(248, 247, 247);
+  }

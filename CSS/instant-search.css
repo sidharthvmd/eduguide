@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+.instant-search,
+.instant-search *{
+    transition: background 0.15s,box-shadow 0.15s;
+}
+.instant-search--loading::after{
+    content:"";
+    position:"absolute";
+    top:0;
+    left:0;
+    height:2px;
+    background:#EDDBCD;
+}
