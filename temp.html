@@ -42,7 +42,7 @@
 <nav class="navbar navbar-light navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" style="padding-left: 34px;"><h1></h1></a>
+      <a class="navbar-brand" href="#" style="padding-left: 34px;"><h1>Courses</h1></a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li class="active"><a href="#">Home</a></li>
@@ -58,22 +58,41 @@
                 <i class="material-icons instant-search__icon" style="margin-top: 100px">search</i>
         
         </div>
-        <div class="instant-search__results-container">
-            <a href="#" class="instant-search__result"></a>
-                <div class="instant--search__title">Course Name</div>
-                <p class="instant-search__paragraph">Yes lorem bkahs hshjhahs</p>
-            
-    </div>
-                <div class="instant-search__results-container">
-            <a href="#" class="instant-search__result"></a>
-                <div class="instant--search__title">Course Name</div>
-                <p class="instant-search__paragraph">Yes lorem bkahs hshjhahs</p>
-            
-    </div>
+       <table style="width:100%;margin-top:50px" id="ex-table">
+  <tr id="tr">
+    <th>Course Name:</th>
+    <th>Institution:</th> 
+    <th>Contact no:</th>
+    <th>Description:</th>
+           </tr>
+ </table> 
+
+<script>
+    var database = firebase.database();
+    database.ref().once('value', function(snapshot){
+        if(snapshot.exists()){
+            var content = '';
+            snapshot.forEach(function(data){
+                var val = data.val();
+                content +='<tr>';
+                content += '<td>' + val.descripcion + '</td>';
+                content += '<td>' + val.direccion + '</td>';
+                content += '<td>' + val.estado + '</td>';
+                content += '<td>' + val.imagen + '</td>';
+                content += '<td>' + val.tipo + '</td>';
+                content += '<td>' + val.udisplayName + '</td>';
+                content += '<td>' + val.uemail + '</td>';
+                content += '</tr>';
+            });
+            $('#ex-table').append(content);
+        }
+    });
+</script>
     
 <div class="container-fluid" style="width:auto;transition: height 2s;">
     <img src="Media/svg.png" class="img-responsive" height="683px" style="margin-top: 2px;width: inherit;">
     <img src="Media/gradientcrop.png" class="img-responsive" height="683px" style="width: inherit;"></div></div>
 </body>
 <script src="home.js"></script>
+
 </html>
