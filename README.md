@@ -1,6 +1,5 @@
 # nameless
-Course search website 
-
+Search for courses and scholarships
 
 
 Team
