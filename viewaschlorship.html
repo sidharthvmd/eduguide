@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="viewaschlorship.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navbar items -->
+    <div id="navlist">
+      <a href="home.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="temp.html">Courses</a>
+      <a href="schsrch.html">Schlorships</a>
+      <a href="aboutus.html">About Us</a>
+
+      <!-- search bar right align -->
+      <div class="search">
+        <form action="#">
+          <input type="text" placeholder=" Search" name="search">
+          <button class="buttonSearch">
+            <i class="material-icons instant-search__icon">search</i>
+          </button>
+        </form>
+      </div>
+    </div><br><br>
+    <hr style="opacity: 0.1;">
+    <h4>Name of schlorship</h4><br>
+    <div class="row">
+      <div class="col-sm-10 col-md-5 col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top"
+            src="data:image/png;base64,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"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Legrand Scholarship Program</h5>
+            <p class="card-text">Award:
+              60% of tuition fees or INR 60,000 per annum (whichever is less)
+              <br> Eligibility:
+              B.Tech/B.E./B.Arch pursuing girl students
+            </p>
+            <a href="#" class="btn btn-primary">APPLY</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-10 col-md-5 col-lg-6">
+        <p1> &nbsp;Legrand Scholarship Program 2021-22, powered by Legrand, supports meritorious girl students to pursue
+          a career in Engineering and Architecture.
+
+          Lighting up millions of Indian homes, Legrand has also been empowering the education dreams of young women who
+          wish to be the future leaders in the field of technology.
+
+          Introduced in the year 2018, the scholarship program has been assisting the promising future women leaders in
+          the field of technology. Under this edition of Legrand Scholarship Program, academically promising girl
+          students can get a scholarship of INR 60,000 per annum or a tuition fee waiver of 60%, whichever is less, for
+          the entire duration of their B.Tech/B.E./B.Arch programme.
+
+          About Legrand: Legrand is the global specialist in electrical and digital building infrastructure. Based in
+          Limoges, Legrand operates in 90 countries and has a market presence in over 180 countries. Legrand offers a
+          wide range of products in the categories of Energy distribution, Wiring devices, Home Automation, Structured
+          Cabling, UPS, Lighting Management Solutions, Cable Management and Industrial application products.</p1>
+
+      </div>
+    </div>
+    <br><br>
+    <h5 style="text-align: center;">SIMILAR SCHLORSHIPS</h5><br>
+    <div class="row">
+      <div class="col-sm-14 col-md-14 col-lg-12">
+        <div class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAn1BMVEX///8Il00Imk8IlUxrwJNju40Jm0/L6dlZuYf2+/kIl0yc1LiY1LVmvZF1yZ5FsHl/yaNPtH/X7uJwwJbh8unq9u/F59W8489cu4qP0K88q3IfoF5gvY3y+fau3cXP7N0XnlgmqWR/zKR5w54zrm+L0Kin2b8woWwupWpDq3iNzq44r3IbqGCKz6vW7NvL7dtRuH5WsYK37NEJiUeg0LjIo2hRAAAEGElEQVR4nO3WW4OiOBAF4FSCEOIFQS4iiGj3sE73ODO9u///t21VQl9m9tXefTnfg2KMwoFUgVIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwXyj24/nW9I1sl5ese46SbaTK/SLqH9RpEUWLG3+TRn0URf1KZt1kUESVmvqwvV7UKnobTxVPX9tEZl9eR3dK7RbRetH3t/ITcpxiItKOeDdqpY3TWj6rJCZDsRq0MfGZv6r4M28+yk+62BjNjC7UnrdJ69jom4qdbMr4Ucl0/UVmyx9pPyMN27zDsb5/kMxl1fGJDJ/2SZtxOywPZLo0rf9w/Ukdm9FsCplXZHzEG38qiw11TV03RIUqV4aWSZ3keqtOOWVJXQ/kSnWy5lpXfnbvrnVdT0QVj8qM6ZF3cPcgxskC2Mc7VZG7+l0vyB2V+ho/yYczDWFiN2ZuETYn3cnb85lzlcbIj9pvLa8ct/c/kfGLyec9tPogb49nnvegZUZt4vsvLqI1n530lqiWdBHGrOWhg2798dPSjw16XzjyQdWKfJBUTmsSgih5WYcgfnxjsnkPW8reRnc+SONcdfcgOS+kyJ90q7OPXxwoW7VtO7oQxMYrNeppDjLe2ltY5wnRbnXzmTnIY/s6/jFIx6Pf/faOsh8/pk5v7p5DlWeudBovvFJ4mX8MwsWuY23CFUk1cbtydg5idBzv5yA8Lw5LZc3tQMf570Fk1HyZgxhpJov75+BD3HJ1m/hBZXT5Nch1b60dQ5AmNptNLv3IByFr83B1EkPZ3vZ+fE3d3ubL34NQZ+3PZA7S2bzjXvEZSfiqLDtjeNf5x8GDlvsHF7s/sN5IVzah8ucaeQ3yVrhzjfwryOFt1NdIetX2/iGe/a3hZExZGz0fUvS4lCB+pYViT0dza4bhauwcRCp3mI6+2E/vQd5PhQ9SDfVrkHQYUgkif9C7/v5BQgFX2hTqm3n2K6SlOJH26ys4tN+GrvJhoFHepnBFdFy8tV9v597PtG+/RTzK30mQo6+j0H6ti+4f5MrLJT2+xONR/fkX95d64FUUqbS4On4CSU+d2VaqfNE9H+6R74FtqqoLdaeiOMkN8TiRmeYkpXVZMd/pyt4cinLi/FXkrkVRNIZ7d7knmWEpv/99xBkXj/wIIdflb03+ESX3xc1VwZeAnzSeVcfVwQ8qLQ9yF75q+U5qplC9bIdqKP1jSSjjimf6OWc1clvjvkjyiKJlxok7Oz8E3duiH14cZaEFFRu+QLk8GRY596WInzr4bat2/Mqtv5FPjbrIG7O2UivZvoWD5x5nf4Z76lG2ZQr/9nU214W0Qb4YT9Z+SgMGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAID/3z9cZTvmciL9ngAAAABJRU5ErkJggg==" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Schaeffler Schlorship</h5>
+              <p class="card-text">Award:
+                Up to INR 75,000 per year for complete duration of engineering program
+               <br> Eligibility:
+                1st yr. Engineering students (Gujarat, Maharashtra and Tamil Nadu)</p>
+            </div>
+           
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="data:image/png;base64,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" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Colgate Schlorship</h5>
+              <p class="card-text">Award:
+                INR 30,000 per annum for 4 years
+               <br> Eligibility:
+                1st year Engineering students</p>
+            </div>
+           
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">PDEU admission scholarship</h5>
+              <p class="card-text">Award:
+                Variable awards
+               <br> Eligibility:
+                UG, PG and Ph.D. applicants</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script src="viewschlorship.js"></script>
+
+</html>
